@@ -1,0 +1,11 @@
+<% provide(:title, "Posts") %>
+<h1>Post Index</h1>
+<p>
+  <% if logged_in? %>
+    As a logged in member, you can see post authors.
+  <% else %>
+    You are not a member, if you are then <a href="<%= login_url %>">log in here</a>.
+    Otherwise, you won't be able to see the author of the posts.
+  <% end %>
+</p>
+<%= render 'posts' %>
